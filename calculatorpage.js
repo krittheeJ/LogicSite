@@ -5,6 +5,11 @@ const toggleisfindx = () => {
 };
 
 const displayText = (text) => {
+    const previousText = document.getElementById("previous").innerHTML;
+    if (!!previousText){
+        document.getElementById("current").innerHTML = "";
+        document.getElementById("previous").innerHTML = "";
+    }
     const displayedText = document.getElementById("current").innerHTML;
     document.getElementById("current").innerHTML = displayedText + text;
 };
